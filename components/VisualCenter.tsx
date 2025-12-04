@@ -4,27 +4,17 @@ import { Anchor } from 'lucide-react';
 export const VisualCenter: React.FC = () => {
   return (
     <div className="absolute inset-0 pointer-events-none flex items-center justify-center z-0 overflow-hidden">
-      {/* The Whale Silhouette (Background Ambience) */}
-      <div className="absolute w-[150%] md:w-[80%] h-auto opacity-10 blur-[1px] animate-pulse-slow mix-blend-screen transform translate-y-10">
-         <img 
-            src="https://images.unsplash.com/photo-1568430462989-44163eb1752f?q=80&w=2946&auto=format&fit=crop" 
-            alt="Whale Silhouette" 
-            className="w-full h-full object-cover rounded-full mask-image-linear-gradient grayscale brightness-50 contrast-150"
-            style={{ 
-                maskImage: 'radial-gradient(circle, black 30%, transparent 70%)',
-                WebkitMaskImage: 'radial-gradient(circle, black 30%, transparent 70%)'
-            }}
-         />
-      </div>
+      {/* Background Ambience - Subtle Glow only, no Image */}
+      <div className="absolute w-[150%] md:w-[100%] h-[100%] opacity-20 bg-gradient-to-b from-transparent via-deep-sea/30 to-anthracite pointer-events-none"></div>
 
       {/* Center Content Group: Seal + Button */}
-      <div className="relative z-10 md:mt-24 flex flex-col items-center gap-10 animate-float">
+      <div className="relative z-10 mt-12 md:mt-24 flex flex-col items-center gap-8 md:gap-12 animate-float">
          
-         {/* The Official Seal */}
-         <div className="w-64 h-64 md:w-96 md:h-96 rounded-full border-[3px] border-gold/40 bg-gradient-to-br from-slate-950 to-black flex items-center justify-center relative overflow-hidden shadow-[0_0_80px_rgba(212,175,55,0.15)]">
+         {/* The Official Seal - Scaled Up */}
+         <div className="w-72 h-72 md:w-[28rem] md:h-[28rem] rounded-full border-[3px] border-gold/40 bg-gradient-to-br from-slate-950 to-black flex items-center justify-center relative overflow-hidden shadow-[0_0_100px_rgba(212,175,55,0.2)]">
             
             {/* The "Mourning Whale" graphic approximation - Large Scale */}
-            <svg viewBox="0 0 100 100" className="w-40 h-40 md:w-60 md:h-60 fill-slate-900 stroke-gold/90 stroke-[0.5] drop-shadow-[0_0_10px_rgba(212,175,55,0.2)]">
+            <svg viewBox="0 0 100 100" className="w-48 h-48 md:w-72 md:h-72 fill-slate-900 stroke-gold/90 stroke-[0.5] drop-shadow-[0_0_15px_rgba(212,175,55,0.2)]">
                 {/* Stylized Whale Shape */}
                 <path d="M10,50 Q25,20 50,50 T90,50 Q80,80 50,70 T10,50 Z" />
                 {/* Eye */}
@@ -42,7 +32,7 @@ export const VisualCenter: React.FC = () => {
                   <path id="curve-large" d="M 50, 50 m -44, 0 a 44,44 0 1,1 88,0 a 44,44 0 1,1 -88,0" fill="transparent"/>
                   <text className="text-[6px] fill-gold font-serif uppercase tracking-[0.2em] font-bold">
                      <textPath href="#curve-large">
-                        The Emergency Fund for Liquidity Pool Whales • MCMXXIV •
+                        The Emergency Fund for Liquidity Pool Whales • MCMXXV •
                      </textPath>
                   </text>
                </svg>
@@ -53,7 +43,7 @@ export const VisualCenter: React.FC = () => {
          </div>
          
          {/* Glow behind the seal */}
-         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-gold/5 blur-3xl -z-10 rounded-full"></div>
+         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-gold/5 blur-3xl -z-10 rounded-full"></div>
 
          {/* CTA Button (Moved here) */}
          <div className="pointer-events-auto">

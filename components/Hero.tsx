@@ -3,8 +3,8 @@ import React from 'react';
 export const Hero: React.FC = () => {
   return (
     <div className="relative w-full max-w-6xl mx-auto text-center md:pt-10">
-      <div className="mb-6 md:mb-8 overflow-hidden">
-        <p className="font-serif italic text-lg md:text-2xl text-slate-500 tracking-wider animate-float opacity-80">
+      <div className="mb-6 md:mb-8 overflow-hidden flex justify-center">
+        <p className="font-serif italic text-lg md:text-2xl text-slate-500 tracking-wider animate-float opacity-80 border-b border-transparent">
           "Their Prosperity is a Global Imperative."
         </p>
       </div>
